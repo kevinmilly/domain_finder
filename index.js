@@ -42,7 +42,7 @@ const searchDomain = () => {
           });
           await sleep(2000);
           const { available, domain } = response.body;
-           console.log(`Trying Godaddy api for #${wordsTried}: ${domain}`);
+           console.log(`Tried Godaddy api for #${wordsTried}: ${domain} and it is available? ${available}`);
           domain && resultsToExport.push({ domainName: domain, availability: available });
           available
             ? console.log(`${domain} is available!`)
